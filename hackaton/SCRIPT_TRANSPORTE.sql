@@ -73,3 +73,37 @@ ALTER TABLE Servicios ADD CONSTRAINT Servicios_Pasajero
 
 -- End of file.
 
+/*insert into Boleta*/
+insert INTO Boleta(costo) VALUES('S/.50');
+insert INTO Boleta(costo) VALUES('S/.20');
+insert INTO Boleta(costo) VALUES('S/.55');
+insert INTO Boleta(costo) VALUES('S/.44');
+insert INTO Boleta(costo) VALUES('S/.99');
+
+
+
+/*insert into Fecha Transporte*/
+insert INTO FechaTransporte(fechaTrans,horaPratida)VALUES('12-12-2015','08:00am');
+insert INTO FechaTransporte(fechaTrans,horaPratida)VALUES('12-12-2017','09:00am');
+insert INTO FechaTransporte(fechaTrans,horaPratida)VALUES('10-10-2016','10:00am');
+insert INTO FechaTransporte(fechaTrans,horaPratida)VALUES('11-11-2012','11:00am');
+insert INTO FechaTransporte(fechaTrans,horaPratida)VALUES('10-05-2010','05:00am');
+
+
+
+
+/*insert into Pasajero*/
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('jhon','carlens','fffff','236589652365','DNI','2152396896','lima','29','callao');
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('jose','suarez','fffff','236500052365','DNI','2002365896','ica','29','pisco');
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('saul','gonzales','fffff','236589601265','DNI','2152365896','lima','29','ica');
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('jose','carlens','fffff','236589652665','DNI','2152302596','pisco','29','pisco');
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('cesar','carlens','fffff','625589652365','DNI','0052365896','chincha','29','lima');
+insert INTO Pasajero(nomPasajero,apePasajero,razsPasajero,rucPasajero,tipDocuPasajero,numDocu,origenPasajero,edadPasajero,destinoPasajero)VALUES('juan','parma','fffff','239869952365','DNI','2152377896','lima','29','pisco');
+
+
+/*insert into servicios*/
+INSERT INTO servicios(asientos,cantidad) VALUES('24','2');
+INSERT INTO servicios(asientos,cantidad) VALUES('60','2');
+INSERT INTO servicios(asientos,cantidad) VALUES('20','1');
+INSERT INTO servicios(asientos,cantidad) VALUES('19','2');
+INSERT INTO servicios(asientos,cantidad) VALUES('26','1');
