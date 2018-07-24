@@ -1,6 +1,7 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2018-07-24 14:26:38.148
-
+CREATE DATABASE Transporte
+GO
+use Transporte
+GO
 -- tables
 -- Table: Boleta
 CREATE TABLE Boleta (
