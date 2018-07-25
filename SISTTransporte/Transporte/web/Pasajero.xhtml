@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Transporte</title>
+    </h:head>
+    <h:body>
+        <p:growl id="msj" autoUpdate="true"/>
+        <h:form id="frm">
+            <p:panelGrid id="data" columns="2">
+            <p:outputLabel for="nombre" value="Nombre Pasajero"/>
+            <p:inputText id="nombre" value="#{pasajeroC.pasajeroM.nombreP}"/>
+            <p:outputLabel for="apellido" value="Apellido Pasajero"/>
+            <p:inputText id="apellido" value="#{pasajeroC.pasajeroM.apellidoP}"/>
+            <p:outputLabel for="razonsocial" value="Razon Social"/>
+            <p:inputText id="razonsocial" value="#{pasajeroC.pasajeroM.razonSocialP}"/>
+            <p:outputLabel for="rucpasajero" value="RUC"/>
+            <p:inputText id="rucpasajero" value="#{pasajeroC.pasajeroM.rucP}"/>
+            <p:outputLabel for="tipodocu" value="Tipo Documento"/>
+            <p:inputText id="tipodocu" value="#{pasajeroC.pasajeroM.tipoDocuP}"/>
+            <p:outputLabel for="numdocu" value="numero documento"/>
+            <p:inputText id="numdocu" value="#{pasajeroC.pasajeroM.numeroDocuP}"/>
+            <p:outputLabel for="origenp" value="Origen"/>
+            <p:inputText id="origenp" value="#{pasajeroC.pasajeroM.origenP}"/>
+            <p:outputLabel for="edadp" value="Edad"/>
+            <p:inputText id="edadp" value="#{pasajeroC.pasajeroM.edadP}"/>
+            <p:outputLabel for="destinop" value="Destino"/>
+            <p:inputText id="destinop" value="#{pasajeroC.pasajeroM.destinoP}"/>
+            </p:panelGrid>
+            <p:commandButton value="Registrar" actionListener="#{pasajeroC.accion('Agregar')}"  oncomplete="PF('wdlgDatos').show();" update="data"/>
+            <p:commandButton value="listar" actionListener="#{pasajeroC.listar()}"/>
+
+            <p:dataTable var="pasajero" value="#{pasajeroC.lstPasajero}">
+
+                <p:column headerText="nombre">
+                    <h:outputText value="#{pasajero.nombreP}" />
+                </p:column>
+
+                <p:column headerText="apellido">
+                    <h:outputText value="#{pasajero.apellidoP}" />
+                </p:column>
+
+                <p:column headerText="razon social">
+                    <h:outputText value="#{pasajero.razonSocialP}" />
+                </p:column>
+
+                <p:column headerText="RUC">
+                    <h:outputText value="#{pasajero.rucP}" />
+                </p:column>
+                <p:column headerText="tipo documento">
+                    <h:outputText value="#{pasajero.tipoDocuP}" />
+                </p:column>
+
+                <p:column headerText="numero documento">
+                    <h:outputText value="#{pasajero.numeroDocuP}" />
+                </p:column>
+                <p:column headerText="origen">
+                    <h:outputText value="#{pasajero.origenP}" />
+                </p:column>
+
+                <p:column headerText="edad">
+                    <h:outputText value="#{pasajero.edadP}" />
+                </p:column>
+                <p:column headerText="destino">
+                    <h:outputText value="#{pasajero.destinoP}" />
+                </p:column>
+
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
